@@ -5,7 +5,7 @@
 
 	<groupId>com.trust.parent</groupId>
 	<artifactId>common-parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
 	<parent>
@@ -80,6 +80,10 @@
 
 		<!-- UTILITY -->
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
@@ -95,4 +99,33 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
+
+
+	<repositories>
+		<repository>
+			<id>Nexus-antigo</id>
+			<url>http://192.168.6.151:8888/nexus/content/repositories/releases/</url>
+		</repository>
+		<repository>
+			<id>Nexus</id>
+			<url>http://nexus.interno.srmasset.com/repository/releases/</url>
+		</repository>
+		<repository>
+			<id>Nexus-SNAPSHOTS</id>
+			<url>http://nexus.interno.srmasset.com/repository/maven-snapshots/</url>
+		</repository>
+		<repository>
+			<id>spring-releases</id>
+			<url>https://repo.spring.io/libs-release</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>Nexus</id>
+			<name>Repositório do Nexus</name>
+			<url>http://nexus.interno.srmasset.com/repository/releases/</url>
+		</repository>
+	</distributionManagement>
+
 </project>
