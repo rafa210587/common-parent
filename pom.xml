@@ -102,10 +102,6 @@
 
 	<repositories>
 		<repository>
-			<id>Nexus-antigo</id>
-			<url>http://192.168.6.151:8888/nexus/content/repositories/releases/</url>
-		</repository>
-		<repository>
 			<id>Nexus</id>
 			<url>http://nexus.interno.srmasset.com/repository/releases/</url>
 		</repository>
@@ -125,6 +121,11 @@
 			<name>Repositório do Nexus</name>
 			<url>http://nexus.interno.srmasset.com/repository/releases/</url>
 		</repository>
+		<snapshotRepository>
+			<id>Nexus</id>
+			<name>Repositório do Nexus</name>
+			<url>http://nexus.interno.srmasset.com/repository/snapshots/</url>
+		</snapshotRepository>
 	</distributionManagement>
 
 </project>
